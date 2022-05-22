@@ -1,12 +1,10 @@
 import React from "react";
 import "./index.css";
-
+import HomePage from "./pages/homepage/homepage.component";
 function App() {
   return (
-    <div className='flex justify-center'>
-      <h1 className='text-2xl font-bold text-red-500 bg-blue-300'>
-        React and Tailwind with Vitejs!
-      </h1>
+    <div className='px-4 lg:px-12 bg-gray-50'>
+      <HomePage />
     </div>
   );
 }
