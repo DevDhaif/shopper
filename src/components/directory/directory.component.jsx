@@ -13,6 +13,7 @@ class Directory extends React.Component {
           size: "",
           imageUrl:
             "https://m.media-amazon.com/images/I/61S1-U2OuYL._AC_UX679_.jpg",
+          linkUrl: "test",
         },
 
         {
@@ -52,8 +53,8 @@ class Directory extends React.Component {
   render() {
     return (
       <div className='flex flex-wrap content-between w-full '>
-        {this.state.section.map(({ title, id, imageUrl, size }) => (
-          <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
+        {this.state.section.map(({ id, ...sectionProps }) => (
+          <MenuItem key={id} {...sectionProps} />
         ))}
       </div>
     );
